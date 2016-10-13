@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>background-position扩展(css3)</title>
+  <style>
+    div {
+      float: left;
+      margin: 2em;
+      max-width: 16em;
+      min-height: 8em;
+      padding: 10px;
+      color: white;
+      font: 100%/1 sans-serif;
+    }
+    #demo1 {
+      background: url(http://csssecrets.io/images/code-pirate.svg)
+                  no-repeat bottom right #58a;   /* 这里的bottom right为回退方案 */
+      background-position: right 20px bottom 10px;  /* css3扩展可以执行偏移量 */
+    }
+    #demo2 {
+      padding: 20px;
+      background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a
+                  bottom right;   /* 或者 100% 100% */
+      background-origin: content-box;
+    }
+    #demo3 {
+      background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a
+                  bottom right;   /* 或者 100% 100% */
+      /* 注 + -两端必须有空白符， 是为了向前兼容 */
+      background-position: calc(100% - 20px) calc(100% - 10px);
+    }
+  </style>
+</head>
+<body>
+  <div id="demo1">background-position CSS3中扩展了允许指定任意角的偏移量</div>
+  <div id="demo2">CSS3新增了background-origin属性可以指定以padding-box或
+    content-box边框为基准，这样可以实现图片始终与内边距一致</div>
+  <div id="demo3">calc()方案，以左上角偏移思路，水平偏移100% - 20px，
+    垂直偏移100% - 10px</div>
+</body>
+</html>
