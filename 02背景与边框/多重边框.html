@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>多重边框</title>
+  <style>
+    div {
+      float: left;
+      margin: 5em;
+      max-width: 8em;
+      background: yellowgreen;
+    }
+    #box1 {
+      box-shadow: 0 0 0 10px #655,
+                  0 0 0 15px deeppink,
+                  0 2px 5px 15px rgba(0,0,0,.6);
+    }
+    #box2 {
+      border: 10px solid #655;
+      /*border-radius: 15px;  */  /* 如果增加圆角会出现outline还是直角 试试看 */ 
+      outline: 5px solid deeppink;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">使用box-shadow方案模拟多重边框</div>
+  <div id="box2">outline方案实现两层边框，正常border为一层，outline为一层</div>
+</body>
+</html>
