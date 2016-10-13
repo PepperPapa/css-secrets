@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>半透明边框</title>
+  <style>
+    body {
+      background: url('http://csssecrets.io/images/stone-art.jpg');
+    }
+    div {
+      float: left;
+      margin: 5em;
+      width: 200px;
+      height: 200px;
+      border: 15px solid hsla(0,0%,100%,.5);
+      background: white;
+    }
+
+    #border-box {
+      border: 15px dashed lightblue;
+    }
+
+    #padding-box {
+      background-clip: padding-box;
+    }
+  </style>
+</head>
+<body>
+  <div>无半透明边框效果, 边框被div白色背景掩盖</div>
+  <div id="border-box">div的背景色延伸到边框的下面</div>
+  <div id="padding-box">半透明边框效果</div>
+</body>
+</html>
