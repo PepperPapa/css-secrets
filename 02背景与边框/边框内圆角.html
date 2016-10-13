@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>边框内圆角</title>
+  <style>
+    .border {
+      float: left;
+      margin: 1em;
+      max-width: 10em;
+      background: #655;
+      padding: .8em;
+    }
+    .border > div {
+      padding: 1em;
+      border-radius: .8em;
+      background: tan;
+    }
+    #inner-round {
+      float: left;
+      margin: 1em;
+      max-width: 10em;
+      padding: 1em;
+
+      background: tan;
+      border-radius: .8em;
+      outline: .8em solid #655;
+      /* 扩张值不能超过outline，也不能小于0.8em(sqrt(2)-1) 这里取大于的整值*/
+      box-shadow: 0 0 0 .6em #655;
+    }
+  </style>
+</head>
+<body>
+  <div class="border">
+    <div>传统方式实现边框内圆角，需增加一层元素</div>
+  </div>
+  <div id="inner-round">使用outline和box-shadow叠加实现，因为outline不跟着圆角
+    走，而box-shadow跟着圆角走</div>
+</body>
+</html>
