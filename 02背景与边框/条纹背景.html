@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>条纹背景</title>
+  <style>
+    h3 {
+      clear: both;
+      padding-top: 1em;
+      text-align: center;
+    }
+    div {
+      margin: .5em 1em;
+      width: 10em;
+      height: 10em;
+      float: left;
+      color: red;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #bg1 {
+      background: linear-gradient(#fb3, #58a);
+    }
+
+    #bg2 {
+      background: linear-gradient(#fb3 20%, #58a 80%);
+    }
+
+    #bg3 {
+      background: linear-gradient(#fb3 50%, #58a 50%);
+    }
+
+    #bg4 {
+      background: linear-gradient(#fb3 50%, #58a 50%);
+      background-size: 100% 30px;
+      /*background-repeat: no-repeat;*/
+    }
+
+    #bg5 {
+      background: linear-gradient(#fb3 30%, #58a 0);
+      background-size: 100% 30px;
+      /*background-repeat: no-repeat;*/
+    }
+
+    #bgv1 {
+      background: linear-gradient(to right, /* 或 90deg */
+                    #fb3 50%, #58a 0);
+      background-size: 30px 100%;
+    }
+
+    #bgd1 {
+      background: linear-gradient(45deg, /* 或 90deg */
+                    #fb3 50%, #58a 0);
+      background-size: 30px 30px;
+    }
+
+    #bgd2 {
+      background: linear-gradient(45deg,
+                    #fb3 25%, #58a 0, #58a 50%,
+                    #fb3 0, #fb3 75%, #58a 0);
+      background-size: 42.4px 42.4px;
+    }
+
+    #bgd3 {
+      background: repeating-linear-gradient(60deg,
+                    #fb3, #fb3 15px, #58a 0, #58a 30px);
+    }
+
+    #bgd4 {
+      background: #58a;
+      background-image: repeating-linear-gradient(30deg,
+                         hsla(0,0%,100%,.1),
+                         hsla(0,0%,100%,.1) 15px,
+                         transparent 0,
+                         transparent 30px);
+    }
+  </style>
+</head>
+<body>
+  <h3>水平条纹原理展示</h3>
+  <div id="bg1"></div>
+  <div id="bg2"></div>
+  <div id="bg3"></div>
+  <div id="bg4">等宽条纹</div>
+  <div id="bg5">不等宽条纹</div>
+  <h3>垂直条纹原理展示</h3>
+  <div id="bgv1"></div>
+  <h3>斜向条纹原理展示</h3>
+  <div id="bgd1">failed</div>
+  <div id="bgd2">正确的斜向条纹</div>
+  <div id="bgd3">60°的斜向条纹</div>
+  <div id="bgd4">灵活的同色系条纹</div>
+</body>
+</html>
