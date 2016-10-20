@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>连续的图像边框</title>
+  <style>
+    div:not([id="content"]) {
+    float: left;
+    margin: 1em;
+    width: 10em;
+    }
+    #bd1 {
+    background: url(http://csssecrets.io/images/stone-art.jpg);
+    background-size: cover;
+    padding: 1em;
+    margin-bottom: 2em;
+    }
+    #content {
+    background: white;
+    padding: 1em;
+    }
+    #bd2 {
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white),
+    url(http://csssecrets.io/images/stone-art.jpg);
+    background-size: cove;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    }
+    #bd3 {
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(-45deg, red 0, red 12.5%,
+                   transparent 0, transparent 25%,
+                   #58a 0, #58a 37.5%,
+                   transparent 0, transparent 50%) 0 / 5em 5em;
+    }
+    @keyframes ants { to {background-position: 100% 100%}}
+    #bd4 {
+    padding: 1em;
+    border: 1px solid transparent;
+    background:
+                linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(-45deg,
+                   black 0, black 25%,
+                white 0, white 50%) 0 / .6em .6em;
+    animation: ants 12s linear infinite;    
+    }
+  </style>
+</head>
+<body>
+  <div id="bd1">
+    <div id="content">test text</div>
+  </div>
+  <div id="bd2">test text</div>
+  <div id="bd3">test text</div>
+  <div id="bd4">test text</div>
+</body>
+</html>
