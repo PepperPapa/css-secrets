@@ -4,36 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>自适应的椭圆</title>
+  <title>平行四边形</title>
   <style>
     div {
     float: left;
-    margin: .5em;
+    margin: 2em;
+    padding: 1em;
     background: #fb3;
     }
 
     #sp1 {
-    width: 200px;
-    height: 150px;
-    border-radius: 50% / 50%;
+    transform: skewX(-45deg);
     }
 
     #sp2 {
-    width: 200px;
-    height: 150px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0; 
     }
 
     #sp3 {
-    width: 200px;
-    height: 150px;
     border-radius: 100% 0 0 0;
     }
   </style>
 </head>
 <body>
-  <div id="sp1"></div>
-  <div id="sp2"></div>
-  <div id="sp3"></div>
+  <div id="sp1">CLICK ME</div>
+  <div id="sp2">CLICK ME</div>
+  <div id="sp3">CLICK ME</div>
 </body>
 </html>
