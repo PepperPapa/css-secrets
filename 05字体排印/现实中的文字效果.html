@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>现实中的文字效果</title>
+  <style>
+  body {
+    font: 250%/1.6 Baskerville, Palatino, serif;
+}
+p {
+    padding: .8em 1em;
+    background: hsl(210, 13%, 60%);
+    color: hsl(210, 13%, 30%);
+    text-shadow: 0 .03em .03em hsla(0,0%,100%,.8);
+}
+p + p {
+    padding: .8em 1em;
+    background: hsl(210, 13%, 40%);
+    color: hsl(210, 13%, 75%);
+    text-shadow: 0 -.03em .03em black;
+}
+h1:first-child {
+    background: deeppink;
+    color: white;
+    text-shadow: 1px 1px black, -1px -1px black,
+                         -1px 1px black, 1px -1px black;
+    text-shadow: 0 0 1px black, 0 0 1px black,
+                         0 0 1px black, 0 0 1px black;
+
+    
+}
+h1:nth-of-type(2) {
+    font-family: Arial, sans-serif;
+    background: #203;
+    color: #ffc;
+    transition: 1s;
+}
+h1:nth-of-type(2):hover {
+    color: transparent;
+    text-shadow: 0 0 .1em, 0 0 .3em;
+}
+h1:nth-of-type(3) {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #58a;
+    text-shadow: 0 1px hsl(0,0%,85%),
+    0 2px hsl(0,0%,80%),
+    0 3px hsl(0,0%,75%),
+    0 4px hsl(0,0%,70%),
+    0 5px hsl(0,0%,65%),
+    0 5px 10px black;
+    
+}
+  </style>
+</head>
+<body>
+  <h1>CSS</h1>
+  <p>“The only way to get rid of a temp­ta­tion is to yield to it.”</p>
+  <p>“The only way to get rid of a temp­ta­tion is to yield to it.”</p>
+  <h1>Glow</h1>
+  <h1>CSS3</h1>
+</body>
+</html>
