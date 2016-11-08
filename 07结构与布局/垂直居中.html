@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>垂直居中-01</title>
+  <style>
+  body {
+    background: #58a;
+}
+    main {
+    position: absolute;
+    width: 40em;
+    height: 20em;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    background: white;
+    /* translate基于自身的尺寸进行变换而不是父元素 */
+    transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    Center me, please!
+  </main>
+</body>
+</html>
