@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>状态平滑的动画</title>
+    <style>
+      /**
+      * Smooth state animations
+      * Photo credits: https://www.flickr.com/photos/employtheskinnyboy/3904743709
+      */
+
+      @keyframes panoramic {
+      to { background-position: 100% 0; }
+      }
+
+      .panoramic {
+      width: 150px; height: 150px;
+      background: url('http://122.112.235.173/blog/images/bg.jpg');
+      background-size: auto 100%;	
+      animation: panoramic 10s linear infinite alternate;
+      animation-play-state: paused;
+      }
+
+      .panoramic:hover, .panoramic:focus {
+      animation-play-state: running;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panoramic"></div>
+  </body>
+</html>
