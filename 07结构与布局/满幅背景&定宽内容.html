@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>满幅的背景，定宽的内容</title>
+  <style>
+  body {
+    margin: 0;
+}
+  #bg {
+      min-height: 100vh;
+      padding: 1em calc(50% - 450px);
+      color: white;
+      font-size: 5em;
+      text-align: center;
+      background-image: url("http://122.112.235.173/blog/images/bg.jpg");
+      background-size: cover;
+}
+  </style>
+</head>
+<body>
+  <div id="bg">定宽的内容900px</div>
+</body>
+</html>
